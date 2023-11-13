@@ -13,12 +13,10 @@ function index (req, res) {
       html: () => {
        const html = ["<h1>POSTS</h1>"];
     
-       html.push("ul");
+       html.push("<ul>");
 
        for ( post of postsDb ) {
-        html.push(`<li>
-            <h3>${post.title}<h3/>
-            </li>`)
+        html.push(`<li>${post.title}</li>`)
        };
 
        html.push("</ul>");
