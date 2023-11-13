@@ -16,7 +16,11 @@ function index (req, res) {
        html.push("<ul>");
 
        for ( post of postsDb ) {
-        html.push(`<li>${post.title}</li>`)
+        html.push(`<li>
+        <h3>${post.title}</h3>
+        <img src="/imgs/posts/${post.image}" alt="" style="width: 100px">
+        <p>${post.content}</p>
+        </li>`)
        };
 
        html.push("</ul>");
